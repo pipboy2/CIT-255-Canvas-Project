@@ -1,0 +1,133 @@
+/* Screen Settings */
+
+* {
+    box-sizing:border-box;
+}
+
+@media only screen and (min-width: 600px) {
+        .col-m-1 {width: 8.33%;}
+        .col-m-2 {width: 16.66%;}
+        .col-m-3 {width: 25%;}
+        .col-m-4 {width: 33.33%;}
+        .col-m-5 {width: 41.66%;}
+        .col-m-6 {width: 50%;}
+        .col-m-7 {width: 58.33%;}
+        .col-m-8 {width: 66.66%;}
+        .col-m-9 {width: 75%;}
+        .col-m-10 {width: 83.33%;}
+        .col-m-11 {width: 91.66%;}
+        .col-m-12 {width: 100%;}
+    }
+@media only screen and (min-width: 768px) {
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+        body{ 
+            max-width:1200px;
+           /* background-image: url("../media/rocks.jpg");
+            background-attachment: fixed;
+            background-repeat:no-repeat;
+            background-size:cover;*/
+            
+        }
+    }
+
+    /* Fonts */
+
+@font-face{
+    font-family:Orbitron;
+    src:url("../fonts/orbitron-medium.otf");
+}
+
+/* Rest of Styling */
+
+canvas{
+    border: whitesmoke 1px solid;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+body{
+    background-image: url("../media/background.png");
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    margin:5%;
+    font-family: Orbitron, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    size:1.5em;
+    color:whitesmoke;
+    text-shadow:1px 1px lightslategray;
+ 
+}
+section{
+    background-color: rgba(0, 120, 141, 0.616);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction:row;
+    font-family: Orbitron, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+div{
+    flex: 1;
+}
+
+h1{
+    color:whitesmoke;
+    font-size: 1.5em;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    /*margin-left:10%;*/
+   
+       
+}
+
+h2{
+    color:whitesmoke;
+    text-shadow: 1px 1px black;
+    background-repeat:no-repeat;
+    padding-left:10px;
+    border-radius:10px;
+    
+}
+hr{
+    border: 1px solid slategray;
+    
+}
+p{
+    background-color: rgba(0, 120, 141, 0.616);
+}
+
+footer {color:black;
+    text-align:center; 
+    letter-spacing:5px;
+    font-family: orbitron, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:whitesmoke;
+    width:100%;
+    margin-left:0%;
+    margin-top:15%;
+    border-radius: 15px;
+}  
+.icons{
+    background-color:black;
+    color:dimgray;
+}
+.icons a{
+    display:inline;
+    text-align:center;
+    padding:12px,0;
+    transition: all 01s ease;
+}
+ .icons :hover{
+  color:whitesmoke;
+  
+}
+  
+  
