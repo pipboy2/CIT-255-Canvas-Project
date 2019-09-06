@@ -1,74 +1,214 @@
-// Object Constructors:
-// Testing to see if we can perform a successful push:
+/* Screen Settings */
 
-//Basic constructor for shapes:
-function canvasObject(height, width, color, x, y) {
-    this .width = width;
-    this .height = height;
-    this .speedX = 0;
-    this .speedY = 0;
-    this .x = x;
-    this .y = y;
-    this .update = function ()
-
-{
-    ctx = myGameArea.context;
-    ctx .fillStyle = color;
-    ctx .fillRect(this.x, this.y, this.width, this.height);
+* {
+    box-sizing: border-box;
 }
 
+@media only screen and (min-width: 600px) {
+    .col-m-1 {
+        width: 8.33%;
+    }
+
+    .col-m-2 {
+        width: 16.66%;
+    }
+
+    .col-m-3 {
+        width: 25%;
+    }
+
+    .col-m-4 {
+        width: 33.33%;
+    }
+
+    .col-m-5 {
+        width: 41.66%;
+    }
+
+    .col-m-6 {
+        width: 50%;
+    }
+
+    .col-m-7 {
+        width: 58.33%;
+    }
+
+    .col-m-8 {
+        width: 66.66%;
+    }
+
+    .col-m-9 {
+        width: 75%;
+    }
+
+    .col-m-10 {
+        width: 83.33%;
+    }
+
+    .col-m-11 {
+        width: 91.66%;
+    }
+
+    .col-m-12 {
+        width: 100%;
+    }
 }
 
-this.newPos = function () {
-    this .gravitySpeed;
-    this .x += this.speedX;
-    this .y += this.speedY;
-    if (this.type == "background")
+@media only screen and (min-width: 768px) {
+    .col-1 {
+        width: 8.33%;
+    }
 
-{
-    if (this.x == -(this.width))
+    .col-2 {
+        width: 16.66%;
+    }
 
-{
-    this .x = 0;
+    .col-3 {
+        width: 25%;
+    }
+
+    .col-4 {
+        width: 33.33%;
+    }
+
+    .col-5 {
+        width: 41.66%;
+    }
+
+    .col-6 {
+        width: 50%;
+    }
+
+    .col-7 {
+        width: 58.33%;
+    }
+
+    .col-8 {
+        width: 66.66%;
+    }
+
+    .col-9 {
+        width: 75%;
+    }
+
+    .col-10 {
+        width: 83.33%;
+    }
+
+    .col-11 {
+        width: 91.66%;
+    }
+
+    .col-12 {
+        width: 100%;
+    }
+
+    body {
+        max-width: 1200px;
+        /* background-image: url("../media/rocks.jpg");
+            background-attachment: fixed;
+            background-repeat:no-repeat;
+            background-size:cover;*/
+    }
 }
 
-}
-}
-}
-}
+/* Fonts */
 
-
-// Second Demo:
-
-var dII = {
-    canvas: document.getElementById("movingCanvas"), start: function ()
-
-{
-    this .canvas.width = 700;
-    this .canvas.height = 350;
-    this .canvas.style.cursor = "none";
-    this .context = this.canvas.getContext("2d");
-    this .frameNo = 0;
-    this .interval = setInterval(updateCanvas, 10);
+@font-face {
+    font-family: Orbitron;
+    src: url("../fonts/orbitron-medium.otf");
 }
 
-,
-clear: function () {
-    this .context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+/* Rest of Styling */
+
+canvas {
+    margin-left: auto;
+    margin-right: auto;
+    border: darkcyan 1px groove;
 }
 
-,
-stop: function () {
-    clearInterval(this.interval);
+button {
+    margin-left: auto;
+    margin-right: auto;
+    border: whitesmoke 1px groove;
+    border-radius: 10px;
+    color: whitesmoke;
+    text-shadow: 1px 1px black;
+    background-color: cadetblue;
 }
 
+body {
+    background-image: url("../media/background.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 5%;
+    font-family: Orbitron, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    size: 1.5em;
+    color: whitesmoke;
+    text-shadow: 1px 1px lightslategray;
 }
 
-function startDemo() {
-    dII .start();
+section {
+    background-color: rgba(0, 120, 141, 0.616);
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    font-family: Orbitron, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+div {
+    flex: 1;
+}
 
-// Button event listeners:
+h1 {
+    color: whitesmoke;
+    font-size: 1.5em;
+    text-shadow: 1px 1px black;
+    text-align: center;
+    /*margin-left:10%;*/
+}
 
-document.getElementById("d2Btn").addEventListener("click", function () { });
+h2 {
+    color: whitesmoke;
+    text-shadow: 1px 1px black;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    border-radius: 10px;
+}
+
+hr {
+    border: 2px solid cadetblue;
+}
+
+p {
+    background-color: rgba(0, 120, 141, 0.616);
+}
+
+footer {
+    color: black;
+    text-align: center;
+    letter-spacing: 5px;
+    font-family: orbitron, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: whitesmoke;
+    width: 100%;
+    margin-left: 0%;
+    margin-top: 15%;
+    border-radius: 15px;
+}
+
+.icons {
+    background-color: black;
+    color: dimgray;
+}
+
+    .icons a {
+        display: inline;
+        text-align: center;
+        padding: 12px,0;
+        transition: all 01s ease;
+    }
+
+    .icons :hover {
+        color: whitesmoke;
+    }
