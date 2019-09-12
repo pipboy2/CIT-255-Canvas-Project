@@ -1,12 +1,14 @@
 
 // Variables:
-var square
-var background
+var square;
+var background;
+var block1;
+var block2;
 var d2 = {
     canvas: document.getElementById("movingCanvas"),
     start: function () {
         this.canvas.width = 800;
-        this.canvas.height = 600;
+        this.canvas.height = 200;
         this.canvas.style.cursor = "none";
         this.context = this.canvas.getContext("2d");
         this.frameNo = 0;
@@ -22,10 +24,7 @@ var d2 = {
     stop: function () {
         clearInterval(this.interval);
     }
-}
-
-// Object Constructors:
-
+};
 
 //Basic constructor for shapes:
 function canvasObject(height, width, color, x, y) {
@@ -59,13 +58,14 @@ function canvasBackground(imgSrc, height, width, x, y) {
     this.y = y;
     this.update = function () {
         ctx = d2.context;
-        ctx.drawImage(this.img, this.x + this.width, this.y, this.width, this.height)
+        ctx.drawImage(this.img, this.x, this.y, this.width, this.height);
+        ctx.drawImage(this.img, this.x + this.width, this.y, this.width, this.height);
     }
     // Function that redraws the object on the Canvas:
     this.newPos = function () {
         this.x += this.speedX;
         this.y += this.speedY;
-        if (this.x == -(this.width + 150)) {
+        if (this.x == -(this.width)) {
             this.x = 0;
         }
 
@@ -80,7 +80,7 @@ function updateCanvas() {
     d2.frameNo += 1;
 
     // Update Background to make it look like it is moving:
-    background.speedX = 0;
+    background.speedX = -1;
     background.newPos();
     background.update();
 
@@ -103,12 +103,17 @@ function updateCanvas() {
     }
     square.newPos();
     square.update();
+
+    // Update static blocks: 
+    block1.newPos();
+    block1.update();
 }
 
 // Function that initializes the demo when called.
 function startDemo() {
-    square = new canvasObject(100, 100, "orange", 400, 150);
-    background = new canvasBackground("media/canvasBG.jpg", 600, 800, 800, 0)
+    background = new canvasBackground("media/digitalBG.jpg", 200, 800, 0, 0);
+    square = new canvasObject(50, 50, "orange", 0, 0);
+    block1 = new canvasObject(20, 50, "red", 150, 50);
     d2.start();
 }
 
@@ -117,3 +122,8 @@ document.getElementById("d2Btn").addEventListener("click", function () {
     document.getElementById("d2Btn").style.display = "none";
     startDemo();
 });
+
+function everyinterval(n) {
+    if ((myGameArea.frameNo / n) % 1 == 0) { return true; }
+    return false;
+}
