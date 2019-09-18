@@ -4,7 +4,8 @@ var square;
 var background;
 var block1;
 var block2;
-var d2 = {                                                              // Might hae students set up their own canvas variable to demonstrate
+// Might have students set up their own canvas variable to demonstrate
+
     canvas: document.getElementById("movingCanvas"),                    // the ability to impliment canvas in webpages. 
     start: function () {                                                // The start function handles the creation of the canvas element itself.
         this.canvas.width = 800;
