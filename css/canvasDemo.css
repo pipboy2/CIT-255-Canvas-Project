@@ -105,10 +105,7 @@
 
     body {
         max-width: 1200px;
-        /* background-image: url("../media/rocks.jpg");
-            background-attachment: fixed;
-            background-repeat:no-repeat;
-            background-size:cover;*/
+     
     }
 }
 
@@ -123,18 +120,18 @@
 
 canvas {
     margin-left: auto;
-    margin-right: auto;
-    border: darkcyan 1px groove;
+    margin-right: auto;   
 }
 
 button {
     margin-left: auto;
     margin-right: auto;
-    border: whitesmoke 1px groove;
-    border-radius: 10px;
-    color: whitesmoke;
+    border: darkseagreen 1px groove;
+    border-radius: 5px;
+    color: white;
     text-shadow: 1px 1px black;
     background-color: cadetblue;
+    margin-top: 5%;
 }
 
 body {
